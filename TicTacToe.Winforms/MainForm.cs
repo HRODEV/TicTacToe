@@ -38,13 +38,21 @@ namespace TicTacToe.Winforms
 
         void game_OnPlayerHasWon(object sender, EventArgs e)
         {
+            //delete eventListner's for click
+            foreach(Components.BoardField field in tableLayoutPanel1.Controls)
+            {
+                field.Click -= tempfield_Click;
+            }
+
             MessageBox.Show(string.Format("player: {0} has won", (sender as Player).Name));
         }
 
         void tempfield_Click(object sender, EventArgs e)
         {
             var clickPos = tableLayoutPanel1.Controls.IndexOf(sender as Control);
-            game.ActivePlayer.PlayTurn(clickPos / 3, clickPos % 3);
+            //check if field is empty, otherwise there will be throw an error
+            if(game.Board.Fields[clickPos / 3, clickPos % 3].FieldStatus == FieldSymbol.Empty)
+                game.ActivePlayer.PlayTurn(clickPos / 3, clickPos % 3);
         }
 
         void game_OnActivePlayerChange(object sender, EventArgs e)
