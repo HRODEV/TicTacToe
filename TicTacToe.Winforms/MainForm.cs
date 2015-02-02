@@ -13,11 +13,13 @@ namespace TicTacToe.Winforms
 {
     public partial class MainForm : Form
     {
-        Game game = new Game("player1", "player2");
+        Game game;
 
-        public MainForm()
+        public MainForm(Game game)
         {
             InitializeComponent();
+
+            this.game = game;
 
             //set fields
             for(int i=0;i<9;i++)

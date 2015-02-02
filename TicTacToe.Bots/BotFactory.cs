@@ -31,7 +31,7 @@ namespace TicTacToe.Bots
             if (player == null) throw new ArgumentNullException("player");
 
             if (listBotTypes.Exists(bt => bt.Name == nameBotType))
-                return (TicTacToe.Bots.AbstactBot)Activator.CreateInstance(listBotTypes.First(bt => bt.Name == nameBotType), new object[] { null, null });
+                return (TicTacToe.Bots.AbstactBot)Activator.CreateInstance(listBotTypes.First(bt => bt.Name == nameBotType), new object[] { player, board });
             else
                 throw new ArgumentException("can't find bot of type " + nameBotType, "nameBotType");
         }
