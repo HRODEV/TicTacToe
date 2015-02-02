@@ -5,6 +5,7 @@ using System.Text;
 
 namespace TicTacToe.Logic
 {
+    [Serializable]
     public class WrongPlayTurnException : Exception
     {
     }
