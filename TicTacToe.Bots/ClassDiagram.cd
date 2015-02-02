@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TicTacToe.Bots.RandomBot">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RandomBot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicTacToe.Bots.AbstactBot">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAA=</HashCode>
+      <FileName>AbstactBot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicTacToe.Bots.BotFactory">
+    <Position X="1.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BotFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

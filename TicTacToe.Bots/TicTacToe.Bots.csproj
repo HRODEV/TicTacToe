@@ -39,13 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstactBot.cs" />
+    <Compile Include="BotFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomBot.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TicTacToe.Logic\TicTacToe.Logic.csproj">
       <Project>{1395c37e-b67b-4313-80aa-984dd54e00be}</Project>
       <Name>TicTacToe.Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
