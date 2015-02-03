@@ -14,17 +14,24 @@ namespace TicTacToe.Bots
             player.OnTurn += player_OnTurn;
         }
 
-        void player_OnTurn(object sender, EventArgs e)
+        protected RandomBot(Player player, Board board, bool addOnTurnListner)
+            : base(player, board)
+        {
+            if(addOnTurnListner)
+                player.OnTurn += player_OnTurn;
+        }
+        
+
+        protected void player_OnTurn(object sender, EventArgs e)
         {
             while(true)
             {
                 var randomTry = rnd.Next(0,9);
-                if(board.Fields[randomTry/3,randomTry%3].FieldStatus == FieldSymbol.Empty)
+                if (board.Fields[randomTry / 3, randomTry % 3].FieldStatus == FieldSymbol.Empty) 
                 {
                     player.PlayTurn(randomTry / 3, randomTry % 3);
                     return;
                 }
-
             }
         }
     }

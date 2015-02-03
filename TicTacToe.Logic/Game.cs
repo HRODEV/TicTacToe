@@ -22,7 +22,7 @@ namespace TicTacToe.Logic
 
             //intitialize object for game
             Board = new Board();
-            Turn = 0;
+            Turn = 1;
             indexActivePlayer = (new Random()).Next(1);//set o 0 or 1
             Players = new[]{
                 new Player(this, FieldSymbol.Circle, playerName1),
@@ -66,6 +66,8 @@ namespace TicTacToe.Logic
 
         private void newTurn()
         {
+            Turn++;
+
             //set first player on inactive
             ActivePlayer.HasTurn = false;
 
@@ -82,6 +84,9 @@ namespace TicTacToe.Logic
 
         private bool isGameEnd()
         {
+            if (Turn == 9)
+                return true;
+
             //check horizontal and vertical
             for (int i = 0; i < 3; i++)
             {
