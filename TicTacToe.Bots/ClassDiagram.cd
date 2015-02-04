@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TicTacToe.Bots.AbstactBot">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIAAAAAAAAAA=</HashCode>
       <FileName>AbstactBot.cs</FileName>
@@ -22,10 +22,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="TicTacToe.Bots.WinBlockerBot">
-    <Position X="9.5" Y="3" Width="1.5" />
+    <Position X="10" Y="3" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WinBlockerBot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TicTacToe.Bots.WinWinBlockerBot">
+    <Position X="10" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WinWinBlockerBot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

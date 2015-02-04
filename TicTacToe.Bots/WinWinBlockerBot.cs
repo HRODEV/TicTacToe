@@ -9,23 +9,16 @@ namespace TicTacToe.Bots
     /// <summary>
     /// this bot checks firts if the can block to win otherwise the will fallback to random
     /// </summary>
-    public class WinBlockerBot : RandomBot
+    public class WinWinBlockerBot : WinBlockerBot
     {
-        public WinBlockerBot(Player player, Board board) : base(player, board, false)
+        public WinWinBlockerBot(Player player, Board board) : base(player, board, false)
         {
             player.OnTurn += player_OnTurn_block;
         }
 
-        protected WinBlockerBot(Player player, Board board, bool addOnTurnListner)
-            : base(player, board, false)
+        void player_OnTurn_block(object sender, EventArgs e)
         {
-            if(addOnTurnListner)
-                player.OnTurn += player_OnTurn_block;
-        }
-
-        protected void player_OnTurn_block(object sender, EventArgs e)
-        {
-            FieldSymbol opSymbol = player.Symbol == FieldSymbol.Cross ? FieldSymbol.Circle : FieldSymbol.Cross;
+            FieldSymbol opSymbol = player.Symbol == FieldSymbol.Cross ? FieldSymbol.Cross : FieldSymbol.Circle;
 
             for (int i = 0; i < 3; i++)
             {
@@ -72,7 +65,7 @@ namespace TicTacToe.Bots
                 return;
             }
 
-            base.player_OnTurn(sender, e);
+            base.player_OnTurn_block(sender, e);
         }
     }
 }
