@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="AbstactBot.cs" />
     <Compile Include="BotFactory.cs" />
+    <Compile Include="CheatBot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomBot.cs" />
     <Compile Include="WinWinBlockerBot.cs" />
